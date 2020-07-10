@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./generateMarkdown');
+const generateMarkdown = require('./generateMarkdown.js');
 
 // array of questions for user
 const questions = [{
@@ -55,7 +55,7 @@ function writeToFile(fileName, data) {
 
   fs.writeFile(fileName, data, "utf-8", function (err) {
     if (err) throw err;
-    console.log("success")
+    console.log("success!")
   });
 
   // function to initialize program
